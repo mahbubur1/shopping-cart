@@ -1,15 +1,15 @@
 function updateCaseNumber(product,price, isIncreasing){
-    const caseInput = document.getElementById(product +'-input');
-    let caseInputText = caseInput.value;
+    const productInput = document.getElementById(product +'-input');
+    let productInputText = productInput.value;
     if (isIncreasing == true){
-        caseInputText= parseInt (caseInputText) + 1;
+        productInputText= parseInt (productInputText) + 1;
     }
-    else if(caseInputText > 0){
-        caseInputText = parseInt (caseInputText) - 1;
+    else if(productInputText > 0){
+        productInputText = parseInt (productInputText) - 1;
     }
-    caseInput.value = caseInputText;
-    const updateCasePrice = document.getElementById(product +'-price');
-    updateCasePrice.innerText = caseInputText * price;
+    productInput.value = productInputText;
+    const updateProductPrice = document.getElementById(product +'-price');
+    updateProductPrice.innerText = productInputText * price;
 }
 // phone number plus 
 document.getElementById('phone-plus').addEventListener('click',function(){
